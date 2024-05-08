@@ -11,7 +11,7 @@ public class HelperUser extends HelperBase {
         super(wd);
     }
 
-    public void openLoginRegistrationForm(){
+    public void openLoginForm(){
 
         WebElement loginTab = wd.findElement(By.cssSelector("a[href='/login?url=%2Fsearch']"));
         loginTab.click();
@@ -20,7 +20,7 @@ public class HelperUser extends HelperBase {
 
     }
 
-    public void fillLoginRegistrationForm(String email, String password) {
+    public void fillLoginForm(String email, String password) {
 
         //    WebElement emailInput = wd.findElement(By.name("email"));
         //   emailInput.click();
@@ -42,11 +42,7 @@ public class HelperUser extends HelperBase {
 
 
     public void submitLogin(){
-        click(By.xpath("//button[text()='Login']"));
-
-
-
-
+        click(By.xpath("//button[@type='submit']"));
 
 
     }
@@ -65,11 +61,18 @@ public class HelperUser extends HelperBase {
     }
 
 
+    public String getMessage() {
 
+     // WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
+     // String text = element.getText();
+    //  return text;
 
+     //   pause(2000);
+     return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
 
+    }
 
-
-
-
+    public void clickOKButton() {
+        click(By.xpath("//button[text()='Ok']"));
+    }
 }
