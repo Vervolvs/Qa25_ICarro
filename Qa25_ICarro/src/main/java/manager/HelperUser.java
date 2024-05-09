@@ -1,5 +1,6 @@
 package manager;
 
+import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,6 +40,26 @@ public class HelperUser extends HelperBase {
 
 
     }
+    //overloading
+    public void fillLoginForm(User user) {
+
+        //    WebElement emailInput = wd.findElement(By.name("email"));
+        //   emailInput.click();
+        //   emailInput.clear();
+        //    emailInput.sendKeys(email);
+
+        type(By.id("email"),user.getEmail());
+
+        //   WebElement passwordInput = wd.findElement(By.xpath("//input[last()]"));
+        //   passwordInput.click();
+        //   passwordInput.clear();
+        //   passwordInput.sendKeys(password);
+
+        type(By.id("password"), user.getPassword());
+
+
+
+    }
 
 
     public void submitLogin(){
@@ -49,12 +70,12 @@ public class HelperUser extends HelperBase {
 
 
     public boolean isLogged() {
-        return isElementPresent(By.xpath("//button[text()='Sign Out']"));
+        return isElementPresent(By.xpath("//*[text()=' Logout ']"));
     }
 
     public void logout() {
 
-        click(By.xpath("//button[text()='SignOut']"));
+        click(By.xpath("//*[text()=' Logout ']"));
 
 
 
