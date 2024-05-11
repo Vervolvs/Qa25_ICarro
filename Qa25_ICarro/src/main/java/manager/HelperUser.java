@@ -94,6 +94,20 @@ public class HelperUser extends HelperBase {
     }
 
     public void clickOKButton() {
+        if(isElementPresent(By.xpath("//button[text()='Ok']")))
         click(By.xpath("//button[text()='Ok']"));
+    }
+
+    public String getErrorText() {
+        return wd.findElement(By.cssSelector("div.error")).getText();
+    }
+
+    public boolean isYallaButtonNotActive() {
+       boolean res = isElementPresent(By.cssSelector("button[disabled]"));
+
+       WebElement element = wd.findElement(By.cssSelector("button[type='submit']"));
+       boolean result = element.isEnabled();
+
+       return res && !result;
     }
 }
