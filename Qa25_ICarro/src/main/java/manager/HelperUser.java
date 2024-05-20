@@ -63,11 +63,7 @@ public class HelperUser extends HelperBase {
     }
 
 
-    public void submit(){
-        click(By.xpath("//button[@type='submit']"));
 
-
-    }
 
 
     public boolean isLogged() {
@@ -83,16 +79,7 @@ public class HelperUser extends HelperBase {
     }
 
 
-    public String getMessage() {
 
-     // WebElement element = wd.findElement(By.cssSelector(".dialog-container>h2"));
-     // String text = element.getText();
-    //  return text;
-
-     //   pause(2000);
-     return wd.findElement(By.cssSelector(".dialog-container>h2")).getText();
-
-    }
 
     public void clickOKButton() {
         if(isElementPresent(By.xpath("//button[text()='Ok']")))
