@@ -42,7 +42,7 @@ public class AddNewCarTests extends TestBase {
 
             app.getHelperCar().openCarForm();
             app.getHelperCar().fillCarForm(car);
-            app.getHelperCar().attachPhoto("");
+            app.getHelperCar().attachPhoto("C:\\Users\\Objec\\OneDrive\\Документы\\GitHub\\Qa25_ICarro\\Qa25_ICarro\\2023-lamborghini-huracan.jpg");
             app.getHelperCar().submit();
 
         Assert.assertTrue(app.getHelperCar().getMessage().contains("added successful"));
@@ -57,7 +57,7 @@ public class AddNewCarTests extends TestBase {
                 .location("Tel Aviv, Israel")
                 .manufacture("Mazda")
                 .model("M3")
-                .year("2023")
+                .year("2020")
                 .fuel("Petrol")
                 .seats(4)
                 .carClass("C")
@@ -90,7 +90,7 @@ public class AddNewCarTests extends TestBase {
     @AfterMethod
     public void postCondition(){
 
-     //    app.getHelperCar();
+         app.getHelperCar().returnToHome();
 
 
     }
