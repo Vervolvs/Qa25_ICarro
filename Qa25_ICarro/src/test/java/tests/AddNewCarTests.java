@@ -31,11 +31,11 @@ public class AddNewCarTests extends TestBase {
                 .location("Tel Aviv, Israel")
                 .manufacture("Mazda")
                 .model("M3")
-                .year("2023")
+                .year("2024")
                 .fuel("Petrol")
                 .seats(4)
                 .carClass("C")
-                .carRegNumber("678-900-"+i)
+                .carRegNumber("678-901-"+i)
                 .price(50)
                 .about("Very nice car")
                 .build();
@@ -61,7 +61,7 @@ public class AddNewCarTests extends TestBase {
                 .fuel("Petrol")
                 .seats(4)
                 .carClass("C")
-                .carRegNumber("678-900-"+i)
+                .carRegNumber("678-906-"+i)
                 .price(50)
                 .build();
 
