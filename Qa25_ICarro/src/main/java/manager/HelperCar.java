@@ -72,4 +72,15 @@ public class HelperCar extends HelperBase {
         click(By.xpath("//button[text()='Search cars']"));
 
     }
+
+    public void searchCurrentMonth(String city, String dateFrom, String dateTo) {
+
+        typeCity(city);
+
+    }
+
+    private void typeCity(String city) {
+
+        
+    }
 }
