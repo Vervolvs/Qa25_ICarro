@@ -73,14 +73,60 @@ public class HelperCar extends HelperBase {
 
     }
 
-    public void searchCurrentMonth(String city, String dateFrom, String dateTo) {
+ //   public void searchCurrentMonth(String city, String dateFrom, String dateTo) {
 
+  //      typeCity(city);
+  //      click(By.id("dates"));
+   //     String[] from = dateFrom.split("/"); //["5"]["30"]["2024"] 5/30/2024
+
+   //     String locatorFrom = "//div[text()=' "+from[1]+" ']";
+   //     click(By.xpath(locatorFrom));
+
+
+   //     String[] to = dateTo.split("/");
+
+
+   //     String locatorTo = "//div[text()=' "+to[1]+" ']";
+   //     click(By.xpath(locatorTo));
+
+ //   }
+
+
+    public void searchCurrentMonth(String city, String dateFrom, String dateTo) {
         typeCity(city);
+        click(By.id("dates"));
+        // "5/30/2024", "5/31/2024"  30  31
+        String[] from = dateFrom.split("/");//["5"]["30"]["2024"]
+
+        String locatorFrom = "//div[text()=' "+from[1]+" ']";
+        click(By.xpath(locatorFrom));
+
+
+        String[]to = dateTo.split("/");
+        String locatorTo = "//div[text()=' "+to[1]+" ']";
+
+        click(By.xpath(locatorTo));
 
     }
 
-    private void typeCity(String city) {
 
+
+
+
+
+
+
+
+
+
+    private void typeCity(String city) {
+        type(By.id("city"),city);
+        click(By.cssSelector("div.pac-item"));
         
+    }
+
+    public boolean isListOfCarsAppeared() {
+
+        return isElementPresent(By.cssSelector("a.car-container"));
     }
 }

@@ -9,7 +9,7 @@ public class SearchCarTests extends TestBase {
     @Test
     public void searchCurrentMonthSuccess(){
 
-        app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel","5/30/2024","5/31/2024");
+        app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel","6/6/2024","6/7/2024");
         app.getHelperCar().submit();
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
@@ -22,10 +22,25 @@ public class SearchCarTests extends TestBase {
 
 
 
+    @Test
+    public void searchCurrentYearSuccess(){
+
+       // app.getHelperCar().searchCurrentYear("Tel Aviv, Israel","5/31/2024","7/15/2024");
 
 
 
 
+    }
+
+
+    @Test
+    public void searchAnyPeriodSuccess(){
+
+      //  app.getHelperCar().searchAnyPeriod("Tel Aviv, Israel","8/15/2024","6/20/2025");
+
+
+
+    }
 
 
 
