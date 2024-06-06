@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 
 public class HelperCar extends HelperBase {
 
@@ -128,5 +131,49 @@ public class HelperCar extends HelperBase {
     public boolean isListOfCarsAppeared() {
 
         return isElementPresent(By.cssSelector("a.car-container"));
+    }
+
+    public void searchCurrentYear(String city, String dateFrom, String dateTo) {
+
+        typeCity(city);
+        click(By.id("dates"));
+
+
+      LocalDate now = LocalDate.now();
+      System.out.println(now);
+      int year = now.getYear();
+      int month = now.getMonthValue();
+      int day = now.getDayOfMonth();
+      LocalDate from = LocalDate.parse(dateFrom, DateTimeFormatter.ofPattern("M/d/yyyy"));
+      LocalDate to = LocalDate.parse(dateTo,DateTimeFormatter.ofPattern("M/d/yyyy"));
+    //  LocalDate from1 = LocalDate.parse("2024:23/5",DateTimeFormatter.ofPattern("yyyy:dd/M"));
+
+      int diffMonth = from.getMonthValue() - month;
+      if(diffMonth>0){
+
+          clickNextMonthBtn(diffMonth);
+
+      }
+        click(By.xpath("//div[text()=' "+from.getDayOfMonth()+" ']"));
+
+      diffMonth = to.getMonthValue()-from.getMonthValue();
+      if(diffMonth>0){
+
+          clickNextMonthBtn(diffMonth);
+
+      }
+        click(By.xpath("//div[text()=' "+to.getDayOfMonth()+" ']"));
+        //String locator = String.format("//div[text()=' %s ']",to.getDayOfMonth());
+        //click(By.xpath(locator));
+
+    }
+
+    private void clickNextMonthBtn(int diffMonth) {
+
+        for (int i = 0; i < diffMonth ; i++) {
+
+            click(By.cssSelector("button[aria-label='Next month']"));
+        }
+
     }
 }
