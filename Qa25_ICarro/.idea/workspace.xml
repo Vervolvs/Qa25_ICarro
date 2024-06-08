@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6547762d-ab51-467c-9bd6-10b19b8c3dc2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperCar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/SearchCarTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SearchCarTests.java" afterDir="false" />
     </list>
@@ -74,6 +76,7 @@
     "Gradle.RegistrationTests.registrationWrongName.executor": "Run",
     "Gradle.RegistrationTests.registrationWrongPassword.executor": "Run",
     "Gradle.SearchCarTests.executor": "Run",
+    "Gradle.SearchCarTests.searchAnyPeriodSuccess.executor": "Run",
     "Gradle.SearchCarTests.searchCurrentMonthSuccess.executor": "Run",
     "Gradle.SearchCarTests.searchCurrentYearSuccess.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -90,7 +93,7 @@
       <recent name="C:\Users\Objec\OneDrive\Документы\GitHub\Qa25_ICarro\Qa25_ICarro" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SearchCarTests.searchCurrentYearSuccess">
+  <component name="RunManager" selected="Gradle.SearchCarTests">
     <configuration name="AddNewCarTests.addNewCarSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -115,30 +118,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddNewCarTests.addNewCarSuccessAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.AddNewCarTests.addNewCarSuccessAll&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="SearchCarTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,6 +132,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;tests.SearchCarTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SearchCarTests.searchAnyPeriodSuccess" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.SearchCarTests.searchAnyPeriodSuccess&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -213,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SearchCarTests.searchCurrentYearSuccess" />
         <item itemvalue="Gradle.SearchCarTests" />
         <item itemvalue="Gradle.SearchCarTests.searchCurrentMonthSuccess" />
+        <item itemvalue="Gradle.SearchCarTests.searchAnyPeriodSuccess" />
+        <item itemvalue="Gradle.SearchCarTests.searchCurrentYearSuccess" />
         <item itemvalue="Gradle.AddNewCarTests.addNewCarSuccess" />
-        <item itemvalue="Gradle.AddNewCarTests.addNewCarSuccessAll" />
       </list>
     </recent_temporary>
   </component>
