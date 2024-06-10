@@ -3,6 +3,7 @@ package manager;
 import models.Car;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 
@@ -236,4 +237,27 @@ public class HelperCar extends HelperBase {
 
 
     }
+
+    public void searchNotValidPeriod(String cyty, String dateFrom, String dateTo) {
+
+        typeCity(cyty);
+        clearTextBox(By.id("dates"));
+        type(By.id("dates"),dateFrom+" - "+dateTo);
+        click(By.cssSelector("div.cdk-overlay-backdrop"));
+
+
+
+    }
+
+    public boolean isYallaButtonNotActive() {
+        boolean res = isElementPresent(By.cssSelector("button[disabled]"));
+
+        WebElement element = wd.findElement(By.cssSelector("button[type='submit']"));
+        boolean result = element.isEnabled();
+
+        return res && !result;
+    }
+
+
+
 }

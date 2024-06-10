@@ -21,10 +21,10 @@ public class SearchCarTests extends TestBase {
     public void searchCurrentMonthSuccess(){
 
         app.getHelperCar().searchCurrentMonth("Tel Aviv, Israel","6/10/2024","6/25/2024");
-        app.getHelperCar().pause(1500);
+        app.getHelperCar().pause(3000);
         app.getHelperCar().getScreen("src/test/screenshots/curMonth.png");
         app.getHelperCar().submit();
-        app.getHelperCar().pause(1500);
+        app.getHelperCar().pause(3000);
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
 
@@ -40,10 +40,10 @@ public class SearchCarTests extends TestBase {
     public void searchCurrentYearSuccess(){
 
         app.getHelperCar().searchCurrentYear("Tel Aviv, Israel","8/15/2024","10/11/2024");
-        app.getHelperCar().pause(1500);
+        app.getHelperCar().pause(2000);
         app.getHelperCar().getScreen("src/test/screenshots/curYear.png");
         app.getHelperCar().submit();
-        app.getHelperCar().pause(1500);
+        app.getHelperCar().pause(3000);
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
 
@@ -54,10 +54,10 @@ public class SearchCarTests extends TestBase {
     @Test
     public void searchAnyPeriodSuccess(){
 
-        app.getHelperCar().searchAnyPeriod("Tel Aviv, Israel","8/15/2024","5/20/2025");
+        app.getHelperCar().searchAnyPeriod("Tel Aviv, Israel","10/15/2024","5/20/2025");
         app.getHelperCar().getScreen("src/test/screenshots/any.png");
         app.getHelperCar().submit();
-        app.getHelperCar().pause(500);
+        app.getHelperCar().pause(1500);
         Assert.assertTrue(app.getHelperCar().isListOfCarsAppeared());
 
 
@@ -68,6 +68,9 @@ public class SearchCarTests extends TestBase {
     public void negativeSearch(){
 
         app.getHelperCar().searchNotValidPeriod("Tel Aviv, Israel","1/10/2023","7/16/2024");
+        app.getHelperCar().submit();
+        Assert.assertTrue(app.getHelperCar().isYallaButtonNotActive());
+        Assert.assertTrue(app.getHelperCar().getErrorText().contains("You can't pick date before today"));
         
     }
 
